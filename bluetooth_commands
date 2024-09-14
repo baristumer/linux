@@ -1,0 +1,13 @@
+sudo pacman -S bluez bluez-utils
+lsmod | grep btusb
+sudo systemctl start bluetooth.service
+sudo systemctl enable bluetooth.service
+bluetoothctl
+power on
+agent on
+default-agent
+scan on
+trust EC:23:42:67:EE:2C
+pair EC:23:42:67:EE:2C
+connect EC:23:42:67:EE:2C
+
